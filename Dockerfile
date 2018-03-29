@@ -3,5 +3,5 @@ MAINTAINER zhuweifeng "wfzhu@alauda.io"
 RUN yum makecache && yum install -y mariadb-server wget && yum clean all
 ADD run.sh /
 RUN chmod a+x /run.sh
-EXPOSE 80
+EXPOSE 3306
 CMD ["/run.sh"]
