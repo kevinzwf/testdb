@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "this is a test web" > /var/www/html/index.html
-/usr/sbin/httpd -DFOREGROUND
+chown -R mysql. /var/lib/mysql
+mysql_install_db --user=mysql
+sleep 5
+/usr/bin/mysqld_safe --datadir='/var/lib/mysql' 
